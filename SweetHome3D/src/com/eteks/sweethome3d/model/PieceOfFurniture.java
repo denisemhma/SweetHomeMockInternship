@@ -27,6 +27,13 @@ import java.math.BigDecimal;
  */
 public interface PieceOfFurniture {
   /**
+   * Returns the volume of this piece of furniture (calculated by width*height*depth)
+   */
+  default float getVolume() {
+    return getWidth() * getDepth() * getHeight();
+  }
+
+  /**
    * Returns the name of this piece of furniture.
    */
   public abstract String getName();
